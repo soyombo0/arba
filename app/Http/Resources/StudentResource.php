@@ -19,7 +19,7 @@ class StudentResource extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'grade_id' => $this->grade_id,
-            'lectures' => LectureResource::collection($this->whenLoaded('lectures'))
+            'lectures' => $this->lectures
         ];
     }
 }
